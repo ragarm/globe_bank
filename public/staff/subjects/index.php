@@ -1,5 +1,5 @@
 <?php
-require_once '../../../private/initialize.php';
+require_once ('../../../private/initialize.php');
 ?>
 <?php
 $subjects = [
@@ -10,10 +10,8 @@ $subjects = [
 ];
 ?>
 
-
-
 <?php $page_title = 'Subjects'; ?>
-<?php include SHARED_PATH . '/staff_header.php'; ?>
+<?php include (SHARED_PATH . '/staff_header.php'); ?>
 
     <div id="content">
         <div class="subjects listing">
@@ -39,11 +37,12 @@ $subjects = [
                         <td><?php echo h($subject['position']); ?></td>
                         <td><?php echo $subject['visible'] == 1 ? 'true' : 'false'; ?></td>
     	                <td><?php echo h($subject['menu_name']); ?></td>
-                        <td><a class="action" href="<?php echo url_for('/staff/subjects/show.php?id=' . $subject['id']); ?>">View</a></td>
+                        <td><a class="action" href="<?php echo url_for('/staff/subjects/show.php?id=' . h(u($subject['id']))); ?>">View</a></td>
                         <td><a class="action" href="">Edit</a></td>
                         <td><a class="action" href="">Delete</a></td>
                     </tr>
-                <?php 
+                <?php
+
             } ?>
             </table>
 
@@ -51,4 +50,4 @@ $subjects = [
 
     </div>
 
-<?php include SHARED_PATH . '/staff_footer.php'; ?>
+<?php include (SHARED_PATH . '/staff_footer.php'); ?>
