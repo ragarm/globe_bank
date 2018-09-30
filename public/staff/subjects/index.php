@@ -1,5 +1,5 @@
 <?php
-require_once ('../../../private/initialize.php');
+require_once '../../../private/initialize.php';
 ?>
 <?php
 $subjects = [
@@ -11,7 +11,7 @@ $subjects = [
 ?>
 
 <?php $page_title = 'Subjects'; ?>
-<?php include (SHARED_PATH . '/staff_header.php'); ?>
+<?php include SHARED_PATH . '/staff_header.php'; ?>
 
     <div id="content">
         <div class="subjects listing">
@@ -41,13 +41,11 @@ $subjects = [
                         <td><a class="action" href="<?php echo url_for('/staff/subjects/edit.php?id=' . h(u($subject['id']))); ?>">Edit</a></td>
                         <td><a class="action" href="">Delete</a></td>
                     </tr>
-                <?php
 
-            } ?>
             </table>
 
         </div>
 
     </div>
 
-<?php include (SHARED_PATH . '/staff_footer.php'); ?>
+<?php include SHARED_PATH . '/staff_footer.php'; ?>
