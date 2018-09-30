@@ -10,8 +10,8 @@ $subjects = [
 ];
 ?>
 
-<?php $page_title = 'Subjects'; ?>
-<?php include SHARED_PATH . '/staff_header.php'; ?>
+<?php $page_title = 'Subjects';?>
+<?php include SHARED_PATH . '/staff_header.php';?>
 
     <div id="content">
         <div class="subjects listing">
@@ -31,7 +31,7 @@ $subjects = [
                     <th>&nbsp;</th>
                 </tr>
 
-                <?php foreach ($subjects as $subject) { ?>
+                <?php foreach ($subjects as $subject) {?>
                     <tr>
                         <td><?php echo h($subject['id']); ?></td>
                         <td><?php echo h($subject['position']); ?></td>
@@ -41,11 +41,11 @@ $subjects = [
                         <td><a class="action" href="<?php echo url_for('/staff/subjects/edit.php?id=' . h(u($subject['id']))); ?>">Edit</a></td>
                         <td><a class="action" href="">Delete</a></td>
                     </tr>
-
+                <?php }?>
             </table>
 
         </div>
 
     </div>
 
-<?php include SHARED_PATH . '/staff_footer.php'; ?>
+<?php include SHARED_PATH . '/staff_footer.php';?>
